@@ -9,11 +9,8 @@ body {
 	color: #000000;
 }
 
-/* The width property has been changed to max-width */
 .content-wrapper {
 	max-width: 1200px;
-/*	margin: 0 auto;*/
-/*	overflow: auto;*/
 	width: 90%;
 	display: flex;
 	justify-content: center;
@@ -50,17 +47,13 @@ p {
 }
 
 /******** HEADER STYLES ********/
-/* The widths are in a percentage! */
 header {
-/*	height: 110px;*/
-/*	margin: 0 auto;*/
 	display: flex;
 	justify-content: center;
 	text-align: center;
 }
 
 header h1 {
-/*	float: left;*/
 	margin: 0;
 	padding: 38px 0 20px 0;
 	width: 100%;
@@ -72,9 +65,7 @@ header h1 span {
 }
 
 header nav {
-/*	float: right;*/
 	padding: 20px 0;
-	
 }
 
 header nav ul {
@@ -84,11 +75,9 @@ header nav ul {
 }
 
 header nav ul li {
-/*	display: inline-block;*/
 	font-size: 0.875rem;
 	font-weight: 700;
 	text-transform: uppercase;
-/*	padding: 0 10px;*/
 	padding: 10px 0;
 	width: 100%;
 }
@@ -100,13 +89,11 @@ header nav ul li a {
 
 /********  MAIN STYLES ********/
 /******** TOP SECTION ********/
-/* The widths are in a percentage! */
 .main-image img {
 	width: 100%;
 	border-top: 3px solid #77A466;
 	border-bottom: 3px solid #77a466;
 }
-
 
 .main-title h2 {
 	color: #45610E;
@@ -129,25 +116,12 @@ header nav ul li a {
 .section-two,
 .section-three {
 	box-sizing: border-box;
-/*	float: left;*/
-/*	padding: 0 40px;*/
 	width: 100%;
 }
 
-.section-one {
-/*	width: 29%;*/
-}
-
 .section-two {
-/*	width: 42%;*/
-/*	border-left: 5px solid #EEE;*/
-/*	border-right: 5px solid #EEE;*/
 	border-top: 5px solid #EEE;
 	border-bottom: 5px solid #EEE;
-}
-
-.section-three {
-/*	width: 29%;*/
 }
 
 .bottom-section h3 {
@@ -166,7 +140,6 @@ header nav ul li a {
 }
 
 /******** FOOTER STYLES ********/
-/* The widths are in a percentage! */
 footer {
 	text-align: center;
 	margin-top: 8px;
@@ -181,7 +154,58 @@ footer span {
 	font-size: 0.875rem;
 }
 
-/*
-* {
-	outline: 2px dashed red;
-}*/
+/******** TABLET STYLES ********/
+@media all and (min-width: 768px) {
+	/******** BOTTOM SECTION ********/
+	.bottom-section .content-wrapper {
+		justify-content: space-evenly;
+	}
+
+	.section-one {
+		width: 26%;
+	}
+
+	.section-two {
+		width: 40%;
+		border-left: 5px solid #EEE;
+		border-right: 5px solid #EEE;
+		border-top: none;
+		border-bottom: none;
+		padding: 0 30px;
+	}
+
+	.section-three {
+		width: 26%;
+	}
+}
+
+/******** DESKTOP STYLES ********/
+@media all and (min-width: 1200px) {	
+	/******** GLOBAL STYLES ********/
+	body {
+		font-size: 1em;
+	}
+
+	/******** HEADER STYLES ********/
+	header .content-wrapper {
+		justify-content: space-between;
+		align-items: center;
+		padding: 20px 0;
+	}
+	
+	header h1 {
+		width: 30%;
+		padding: 0;
+		border-bottom: none;
+		text-align: left;
+	}
+		
+	header nav {
+		width: 21%;
+	}
+	
+	header nav ul {
+		display: flex;
+		justify-content: space-between;
+	}
+}
